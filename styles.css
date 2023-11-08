@@ -1,0 +1,25 @@
+﻿
+body
+{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: aquamarine;
+}
+
+a:link
+{
+    color : darkred;
+    
+}
+
+a:hover {
+    background-color: yellowgreen;
+}
+
+a:visited
+{
+    color : transparent;
+}

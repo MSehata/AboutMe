@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Programming Language Preference</h1>
+
+    <form id="programmingForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label>Preferred Language:</label><br>
+        <input type="radio" id="html" name="preferredLanguage" value="HTML">
+        <label for="html">HTML</label><br>
+
+        <input type="radio" id="javascript" name="preferredLanguage" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+
+        <input type="radio" id="css" name="preferredLanguage" value="CSS">
+        <label for="css">CSS</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('programmingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var preferredLanguage = document.querySelector('input[name="preferredLanguage"]:checked').value;
+
+            alert('Name: ' + firstName + ' ' + lastName + '\nPreferred Language: ' + preferredLanguage);
+        });
+    </script>
+
+    <hr />
+    <h1>Vehicle Preference</h1>
+
+    <form id="vehicleForm">
+        <label for="car">Car:</label>
+        <input type="checkbox" id="car" name="vehicle" value="Car"><br><br>
+
+        <label for="bike">Bike:</label>
+        <input type="checkbox" id="bike" name="vehicle" value="Bike"><br><br>
+
+        <label for="boat">Boat:</label>
+        <input type="checkbox" id="boat" name="vehicle" value="Boat"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('vehicleForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var selectedVehicles = [];
+            var checkboxes = document.getElementsByName('vehicle');
+
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    selectedVehicles.push(checkbox.value);
+                }
+            });
+
+            alert('Selected Vehicles: ' + selectedVehicles.join(', '));
+        });
+    </script>
+
+    <h1>Select a Car</h1>
+
+    <form id="carForm">
+        <label for="carSelect">Choose a car:</label>
+        <select id="carSelect" name="car">
+            <option value="volvo">Volvo</option>
+            <option value="subaru">Subaru</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('carForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var selectedCar = document.getElementById('carSelect').value;
+            alert('Selected Car: ' + selectedCar);
+        });
+    </script>
+
+</body>
+</html>

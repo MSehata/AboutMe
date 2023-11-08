@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript</title>
+</head>
+<body>
+    <button type="button"
+            onclick="document.getElementById('Demo').innerHTML = Date()">
+
+        Click me for Date
+    </button>
+    <p id="Demo"></p>
+
+    <button type="button"
+            onclick="myFunction()">
+        Click for Hello
+    </button>
+
+    <p id="Hello">This will greet you</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById('Hello').innerHTML = "Hello, this is Javascript";
+        }
+    </script>
+
+
+
+</body>
+</html>
